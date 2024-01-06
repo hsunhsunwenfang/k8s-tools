@@ -6,12 +6,20 @@ metadata:
   name: ghcr-test
   namespace: default
 spec:
+  nodeName: $DEBUG_NODE
   containers:
   - name: ghcr-image
-    image: ghcr.io/hsunhsunwenfang/debug:v1
-  imagePullSecrets:
-  - name: hsunhsunwenfang-ghcr-secret
-  securityContext:
-    runAsUser: 1000
-    runAsGroup: 3000
-    fsGroup: 2000
+    image: ghcr.io/hsunhsunwenfang/k8s-tools:main
+    volumeMounts:
+    - mountPath: /host
+      name: host-root
+  # imagePullSecrets:
+  # - name: hsunhsunwenfang-ghcr-secret
+  # securityContext:
+  #   runAsUser: 1000
+  #   runAsGroup: 3000
+  #   fsGroup: 2000
+  volumes:
+  - hostPath:
+      path: /
+      type: ""
