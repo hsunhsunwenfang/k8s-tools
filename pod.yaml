@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: ghcr-test
+  name: ghcr-test
+  namespace: default
+spec:
+  containers:
+  - name: ghcr-image
+    image: ghcr.io/hsunhsunwenfang/debug:v1
+  imagePullSecrets:
+  - name: hsunhsunwenfang-ghcr-secret
