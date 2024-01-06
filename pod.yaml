@@ -11,3 +11,7 @@ spec:
     image: ghcr.io/hsunhsunwenfang/debug:v1
   imagePullSecrets:
   - name: hsunhsunwenfang-ghcr-secret
+  securityContext:
+    runAsUser: 1000
+    runAsGroup: 3000
+    fsGroup: 2000
