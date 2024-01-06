@@ -20,7 +20,7 @@ spec:
   #   runAsGroup: 3000
   #   fsGroup: 2000
   volumes:
-  - hostPath:
-      name: host-root
+  - name: host-root
+    hostPath:
       path: /
       type: ""
