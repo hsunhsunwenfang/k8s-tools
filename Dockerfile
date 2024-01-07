@@ -1,8 +1,9 @@
 
-FROM ubuntu
+FROM photon
 
-ENTRYPOINT ["/bin/bash", "-c"]
-CMD ["tail -f /dev/null"]
+# Keep from completed
+CMD ["sh", "-c"]
+# CMD ["sh", "-c", "while true; do sleep 3600; done"]
 
 
 
