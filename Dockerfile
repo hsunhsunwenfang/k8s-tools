@@ -1,5 +1,6 @@
 
-FROM photon
+# FROM photon
+FROM alpine
 
 # Keep from completed
 ENTRYPOINT ["/bin/bash", "-c"]
