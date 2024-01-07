@@ -13,6 +13,8 @@ spec:
     volumeMounts:
     - mountPath: /host
       name: host-root
+    securityContext:
+      privileged: true
   # imagePullSecrets:
   # - name: hsunhsunwenfang-ghcr-secret
   # securityContext:
