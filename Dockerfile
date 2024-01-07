@@ -4,7 +4,8 @@ FROM alpine
 
 RUN apk update && apk upgrade && \
     apk add --no-cache bash openssh && \
-    apk add strace
+    apk add strace && \
+    apk add --no-cache curl iputils net-tools bind-tools && \
 
 # Keep from completed
 ENTRYPOINT ["/bin/bash", "-c"]
