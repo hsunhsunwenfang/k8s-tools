@@ -2,7 +2,8 @@
 FROM photon
 
 # Keep from completed
-CMD ["sh", "-c"]
+ENTRYPOINT ["/bin/bash", "-c"]
+CMD ["tail -f /dev/null"]
 # CMD ["sh", "-c", "while true; do sleep 3600; done"]
 
 
